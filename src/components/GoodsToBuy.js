@@ -1,9 +1,15 @@
 
-const GoodsToBuy = ({good}) => {
+const GoodsToBuy = ({good, complete}) => {
+  const handleToggle = (good) => {
+    good.target.classList.toggle('done')
+    good.target.parentNode.classList.toggle('divDone')
+  }
   return (
-  <>
-    <h2>{good.task}</h2>
-   </>)
+    <div className='goodDiv'>
+      <p className="good" onClick={handleToggle}>{good.task}</p>
+      <button className="goodTrash">🗑</button>
+    </div>
+  )
 }
 
 export default GoodsToBuy

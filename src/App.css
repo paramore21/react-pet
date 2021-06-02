@@ -1,12 +1,117 @@
+.App {
+  display: grid;
+  grid-template-columns: 768px 500px;
+  grid-template-rows: 100px auto;
+}
+
 .shopList{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 80px;
+  margin-top: 16px;
 }
 
 .shopListInput {
   width: 500px;
   height: 50px;
   outline: none;
+  box-sizing: border-box;
+}
+
+.shopListButton {
+  height: 50px;
+}
+
+.categories {
+  grid-row: 2;
+  width: 100%;
+}
+.categoriesList {
+  display: flex;
+
+  flex-wrap: wrap;
+  width: 768px;
+  height: 768px;
+}
+
+.categorieItem {
+  display: flex;
+  list-style: none;
+  border: 1px solid rgb(0, 119, 119);
+  box-shadow: none;
+  outline: none;
+  background-color: azure;
+  font-size: 18px;
+  width: 230px;
+  height: 65px;
+  box-sizing: border-box;
+}
+
+.categorieItem:last-child {
+  border-bottom: 1px solid rgb(0, 119, 119);
+  margin: 0 230px;
+}
+
+.categorieButton {
+  border: none;
+  border-right: 1px solid rgb(0, 119, 119);
+  box-shadow: none;
+  outline: none;
+  background-color: azure;
+  font-size: 25px;
+  width: 60px;
+  height: 60px;
+}
+
+.categorieName {
+  margin: 0 auto;
+  align-self: center;
+}
+
+.goods {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.goodDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 200px;
+  align-items: center;
+  height: 80px;
+  border: 1px solid rgba(0, 44, 44, 0.295);
+  border-top: none;
+}
+
+.goodDiv:first-child {
+  border-top: 1px solid rgba(0, 44, 44, 0.295);
+}
+.good {
+  font-size: 25px;
+  color:rgb(0, 44, 44);
+  margin: 0;
+  display: block;
+  width: 150px;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.divDone {
+  background-color: rgb(218, 218, 218);
+
+}
+
+.goodTrash {
+  font-size: 35px;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  cursor: pointer;
 }
